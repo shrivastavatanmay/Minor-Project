@@ -1,0 +1,9 @@
+backend/venv/
+frontend/node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.zip
+*.tar.gz
+*.dll

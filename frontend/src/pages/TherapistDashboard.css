@@ -1,0 +1,221 @@
+.therapist-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.therapist-main {
+  flex: 1;
+  padding: 2rem 3rem;
+  margin-left: 280px; /* Same as student sidebar */
+  transition: all 0.3s ease;
+}
+
+.welcome-section {
+  margin-bottom: 2.5rem;
+}
+
+.welcome-section h1 {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.stat-info h3 {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.dashboard-sections {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.section-card {
+  height: 100%;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.student-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+
+.student-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.student-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.student-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+}
+
+.student-details h4 {
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
+}
+
+.student-details p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.stress-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.stress-high { background: rgba(255, 71, 87, 0.15); color: #ff4757; }
+.stress-moderate { background: rgba(255, 165, 2, 0.15); color: #ffa502; }
+.stress-low { background: rgba(46, 213, 115, 0.15); color: #2ed573; }
+
+.request-count-pill {
+  margin-left: auto;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: #ff6b6b;
+  color: white;
+  font-size: 0.72rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  font-weight: 700;
+}
+
+.consult-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: min(420px, calc(100vw - 40px));
+  z-index: 80;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(18, 20, 32, 0.95);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  padding: 0.9rem;
+}
+
+.consult-popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  color: var(--text-primary);
+}
+
+.consult-popup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.consult-popup-item {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.consult-popup-item p {
+  margin: 0;
+}
+
+.consult-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .consult-popup {
+    top: 12px;
+    right: 12px;
+    width: calc(100vw - 24px);
+  }
+}

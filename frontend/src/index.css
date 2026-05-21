@@ -1,0 +1,322 @@
+/* ── MindEase Design System: Serene Horizon ── */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ── Color Tokens ── */
+  --primary: #3d618e;
+  --primary-container: #a8cbff;
+  --primary-dim: #305581;
+  --on-primary: #f8f8ff;
+  --on-primary-container: #1c436f;
+
+  --secondary: #46655e;
+  --secondary-container: #d5f8ef;
+  --on-secondary: #e3fff7;
+  --on-secondary-container: #416059;
+
+  --tertiary: #684cb6;
+  --tertiary-container: #c1acff;
+  --on-tertiary: #fdf7ff;
+  --on-tertiary-container: #3e1d8b;
+
+  --surface: #f7f9fb;
+  --surface-container: #eaeef1;
+  --surface-container-high: #e3e9ec;
+  --surface-container-highest: #dde3e7;
+  --surface-container-low: #f1f4f6;
+  --surface-container-lowest: #ffffff;
+  --on-surface: #2d3337;
+  --on-surface-variant: #596063;
+
+  --outline: #757c7f;
+  --outline-variant: #acb3b7;
+
+  --error: #ac3434;
+  --error-container: #f56965;
+  --on-error: #fff7f6;
+
+  /* ── Stress Colors ── */
+  --stress-low: #4ade80;
+  --stress-moderate: #fbbf24;
+  --stress-high: #ef4444;
+
+  /* ── Typography ── */
+  --font-headline: 'Manrope', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* ── Spacing ── */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+
+  /* ── Radius ── */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-ambient: 0px 20px 40px rgba(45, 51, 55, 0.06);
+  --shadow-sm: 0px 4px 12px rgba(45, 51, 55, 0.04);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--surface);
+  color: var(--on-surface);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-dim);
+}
+
+/* ── Button Styles ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-6);
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dim) 100%);
+  color: var(--on-primary);
+  box-shadow: var(--shadow-ambient);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 24px 48px rgba(45, 51, 55, 0.1);
+}
+
+.btn-secondary {
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
+}
+
+.btn-secondary:hover {
+  background: var(--secondary);
+  color: var(--on-secondary);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1.5px solid rgba(172, 179, 183, 0.15);
+}
+
+.btn-outline:hover {
+  background: var(--surface-container-low);
+}
+
+.btn-lg {
+  padding: var(--spacing-4) var(--spacing-8);
+  font-size: 1.05rem;
+}
+
+/* ── Input Styles ── */
+.input-field {
+  width: 100%;
+  padding: var(--spacing-3) var(--spacing-4);
+  background: var(--surface-container-highest);
+  border: 2px solid transparent;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--on-surface);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.input-field:focus {
+  background: var(--surface-container-lowest);
+  border-color: rgba(61, 97, 142, 0.2);
+  box-shadow: 0 0 0 4px rgba(61, 97, 142, 0.08);
+}
+
+.input-field::placeholder {
+  color: var(--outline);
+}
+
+/* ── Card Styles ── */
+.card {
+  background: var(--surface-container-lowest);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-ambient);
+}
+
+.card-glass {
+  background: rgba(247, 249, 251, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-6);
+  border: 1px solid rgba(172, 179, 183, 0.15);
+}
+
+/* ── Layout Utilities ── */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-6);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 { gap: var(--spacing-2); }
+.gap-3 { gap: var(--spacing-3); }
+.gap-4 { gap: var(--spacing-4); }
+.gap-6 { gap: var(--spacing-6); }
+.gap-8 { gap: var(--spacing-8); }
+
+.grid {
+  display: grid;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ── Stress Indicators ── */
+.stress-low {
+  color: var(--stress-low);
+}
+
+.stress-moderate {
+  color: var(--stress-moderate);
+}
+
+.stress-high {
+  color: var(--stress-high);
+}
+
+.stress-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.stress-badge.low {
+  background: rgba(74, 222, 128, 0.15);
+  color: #16a34a;
+}
+
+.stress-badge.moderate {
+  background: rgba(251, 191, 36, 0.15);
+  color: #d97706;
+}
+
+.stress-badge.high {
+  background: rgba(239, 68, 68, 0.15);
+  color: #dc2626;
+}
+
+/* ── Animations ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.animate-slideIn {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,48 @@
+test_01_health (__main__.MindEaseAPITestCase.test_01_health) ... ok
+test_02_consult_error_parser (__main__.MindEaseAPITestCase.test_02_consult_error_parser) ... ok
+test_03_message_error_parser (__main__.MindEaseAPITestCase.test_03_message_error_parser) ... ok
+test_04_get_therapists (__main__.MindEaseAPITestCase.test_04_get_therapists) ... ok
+test_05_get_therapists_filter (__main__.MindEaseAPITestCase.test_05_get_therapists_filter) ... ok
+test_06_get_profile (__main__.MindEaseAPITestCase.test_06_get_profile) ... FAIL
+test_07_get_questionnaire (__main__.MindEaseAPITestCase.test_07_get_questionnaire) ... ok
+test_08_get_journals (__main__.MindEaseAPITestCase.test_08_get_journals) ... ok
+test_09_post_journal_valid (__main__.MindEaseAPITestCase.test_09_post_journal_valid) ... ok
+test_10_post_journal_missing (__main__.MindEaseAPITestCase.test_10_post_journal_missing) ... ok
+test_11_get_chat_no_auth (__main__.MindEaseAPITestCase.test_11_get_chat_no_auth) ... ok
+test_12_get_chat_missing_param (__main__.MindEaseAPITestCase.test_12_get_chat_missing_param) ... ok
+test_13_get_chat_full (__main__.MindEaseAPITestCase.test_13_get_chat_full) ... ok
+test_14_post_chat_missing (__main__.MindEaseAPITestCase.test_14_post_chat_missing) ... ok
+test_15_post_chat_full (__main__.MindEaseAPITestCase.test_15_post_chat_full) ... ok
+test_16_consult_req_missing (__main__.MindEaseAPITestCase.test_16_consult_req_missing) ... ok
+test_17_consult_req_full (__main__.MindEaseAPITestCase.test_17_consult_req_full) ... ok
+test_18_update_consult_invalid (__main__.MindEaseAPITestCase.test_18_update_consult_invalid) ... ok
+test_19_get_therapist_patients (__main__.MindEaseAPITestCase.test_19_get_therapist_patients) ... C:\Users\shriv\Downloads\stress_management-main\stress_management-main\backend\venv\Lib\site-packages\hpack\table.py:186: ResourceWarning: unclosed <ssl.SSLSocket fd=1244, family=2, type=1, proto=0, laddr=('192.168.0.12', 62942), raddr=('172.64.149.246', 443)>
+  for (i, (n, v)) in enumerate(self.dynamic_entries):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_20_predict_stress_empty (__main__.MindEaseAPITestCase.test_20_predict_stress_empty) ... FAIL
+
+======================================================================
+FAIL: test_06_get_profile (__main__.MindEaseAPITestCase.test_06_get_profile)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\shriv\Downloads\stress_management-main\stress_management-main\backend\test_api.py", line 39, in test_06_get_profile
+    self.assertIn(res.status_code, [200, 404, 503])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 not found in [200, 404, 503]
+
+======================================================================
+FAIL: test_20_predict_stress_empty (__main__.MindEaseAPITestCase.test_20_predict_stress_empty)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\shriv\Downloads\stress_management-main\stress_management-main\backend\test_api.py", line 109, in test_20_predict_stress_empty
+    self.assertEqual(res.status_code, 400)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 404 != 400
+
+----------------------------------------------------------------------
+Ran 20 tests in 2.976s
+
+FAILED (failures=2)
+Starting 20 Test Cases...
+<sys>:0: ResourceWarning: unclosed <ssl.SSLSocket fd=1268, family=2, type=1, proto=0, laddr=('192.168.0.12', 58117), raddr=('172.64.149.246', 443)>
