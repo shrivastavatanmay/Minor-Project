@@ -1,6 +1,6 @@
 #  Intelligent Emotional Well-Being Monitoring System
 
-## 📌 Overview
+##  Overview
 
 This project is an AI-driven emotional well-being monitoring platform designed for college students. It combines stress assessment, facial analysis, journaling, and therapist interaction.
 
@@ -18,7 +18,7 @@ Unlike traditional systems, this project focuses on **stress levels (Low, Modera
 
 ---
 
-## 🧠 Stress Detection Layer
+##  Stress Detection Layer
 
 The system captures facial data via webcam and processes it using deep learning models.
 
@@ -61,7 +61,7 @@ Predictions are averaged over multiple frames for accuracy.
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - React.js
@@ -88,14 +88,14 @@ Predictions are averaged over multiple frames for accuracy.
 - VS Code
 - Postman
 
-## 🔐 Privacy
+## Privacy
 
 - No image storage  
 - Only stress labels stored  
 - Secure authentication  
 
 ---
-## 🏗️ System Architecture
+## System Architecture
 
 The system follows a full-stack architecture consisting of:
 
@@ -120,28 +120,64 @@ The frontend communicates with backend APIs through HTTP requests. The backend p
 - Role-based authentication
 - Secure data handling
 ---
-## 📂 Project Structure
+### API Endpoints
 
-```bash
-frontend/
- ├── src/
- ├── pages/
- ├── components/
+### Authentication APIs
+- POST /register
+- POST /login
 
-backend/
- ├── app.py
- ├── test_api.py
- ├── requirements.txt
+### Stress Assessment APIs
+- GET /questionnaire
+- POST /predict-stress
 
+### Journal APIs
+- GET /journals
+- POST /journals
 
-## 🛠️ Setup Instructions
+### Therapist APIs
+- GET /therapists
+- POST /consult-request
+
+### Chat APIs
+- GET /chat
+- POST /chat
+
+##  API Testing
+
+The backend APIs were tested using automated Python test cases.
+
+### Test Summary
+- Total Test Cases: 20
+- Passed: 18
+- Failed: 2
+
+### Tested Modules
+- Authentication
+- Journaling
+- Therapist consultation
+- Chat system
+- Stress prediction APIs
+
+##  Database Tables
+
+The system uses Supabase PostgreSQL for storing application data.
+
+### Main Tables
+- users
+- journals
+- stress_results
+- therapists
+- consultation_requests
+- chat_messages
+
+##  Setup Instructions
 
 1. Ensure you have configured your `.env` files in both the `frontend` and `backend` directories.
 2. Run database setup scripts (e.g., `chat_setup.sql`) in your Supabase SQL editor. *(Note: The system contains built-in Python fallbacks so the app will still function in 'demo mode' even if tables are missing!)*
 3. Use the supplied Terminal commands to run both the Frontend (`npm run dev`) and Backend (`python app.py`) simultaneously.
 
 ---
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - Cloud deployment
 - Mobile application support
