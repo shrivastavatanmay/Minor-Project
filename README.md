@@ -1,4 +1,4 @@
-# 🧠 Intelligent Emotional Well-Being Monitoring System
+#  Intelligent Emotional Well-Being Monitoring System
 
 ## 📌 Overview
 
@@ -8,7 +8,7 @@ Unlike traditional systems, this project focuses on **stress levels (Low, Modera
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 - Detect student stress levels using AI
 - Combine questionnaire + facial analysis
@@ -63,13 +63,30 @@ Predictions are averaged over multiple frames for accuracy.
 
 ## ⚙️ Tech Stack
 
-Frontend: React  
-Backend: Node.js / Flask  
-AI: Hugging Face, OpenCV  
-Database: Supabase  
-IDE: Antigravity  
+### Frontend
+- React.js
+- HTML5
+- CSS3
+- JavaScript
+- Vite
 
----
+### Backend
+- Flask
+- REST APIs
+- Python
+
+### AI / ML
+- OpenCV
+- Hugging Face
+- Deep Learning Models
+
+### Database
+- Supabase (PostgreSQL)
+
+### Tools
+- GitHub
+- VS Code
+- Postman
 
 ## 🔐 Privacy
 
@@ -78,16 +95,44 @@ IDE: Antigravity
 - Secure authentication  
 
 ---
+## 🏗️ System Architecture
 
-## 🚀 Features
+The system follows a full-stack architecture consisting of:
 
-- **Real-time stress detection:** Analyzes facial expressions via webcam to map stress levels.
-- **Dashboard visualization:** Interactive charts tracking your emotional trends over time.
-- **Journal tracking:** Daily sentiment analysis for your text journal entries.
-- **Therapist interaction:** Submit consultation requests to verified professionals.
-- **Real-Time Live Chat:** Instant, secure messaging directly between students and therapists within the application.
+1. Frontend Layer (React)
+2. Backend API Layer (Flask)
+3. AI Emotion Detection Module
+4. Supabase Database Layer
+5. Authentication Module
 
+The frontend communicates with backend APIs through HTTP requests. The backend processes stress assessments, journal entries, therapist requests, and emotion detection results before storing them in the database.
+
+##  Features
+
+- Real-time stress detection
+- Facial emotion analysis
+- Stress questionnaire system
+- Student dashboard
+- Therapist dashboard
+- Journal sentiment tracking
+- Consultation request management
+- Live chat support
+- Role-based authentication
+- Secure data handling
 ---
+## 📂 Project Structure
+
+```bash
+frontend/
+ ├── src/
+ ├── pages/
+ ├── components/
+
+backend/
+ ├── app.py
+ ├── test_api.py
+ ├── requirements.txt
+
 
 ## 🛠️ Setup Instructions
 
@@ -96,7 +141,14 @@ IDE: Antigravity
 3. Use the supplied Terminal commands to run both the Frontend (`npm run dev`) and Backend (`python app.py`) simultaneously.
 
 ---
+## 🔮 Future Enhancements
 
+- Cloud deployment
+- Mobile application support
+- Advanced AI stress prediction
+- Real-time therapist video consultation
+- Wearable sensor integration
+- Multi-language support
 ## 📌 Note
 
 This system does not diagnose mental health conditions. It provides guidance only.
